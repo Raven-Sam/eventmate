@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Selection - EventMate</title>
-    <link rel="stylesheet" href="/css/ticket1.css">
+    <link rel="stylesheet" href="./css/ticket1.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav>
-        <div class="logo">EVENTMATE</div>
-        <div class="search">
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="nav-links">
-            <a href="#">Cart</a>
-            <a href="#">Events</a>
-            <a href="#">Account</a>
-        </div>
+      <div class="logo">
+        <a href="./index.html"><img src="./assets/Logo.svg" alt="" /></a>
+      </div>
+      <div class="search">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="search" />
+      </div>
+      <div class="routes">
+        <ul>
+          <li class="eventlink"><a href="#">Cart</a></li>
+          <li class="eventlink"><a href="#">Events</a></li>
+          <li class="eventlink"><a href="#">Accounts</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Ticket Selection Section -->
     <section class="ticket-selection">
+      <div><img src="./assets/tickets with paper clip.png" alt="" /></div>
         <h1>Choose Your Ticket Type</h1>
         <div class="tickets">
             <!-- Ticket Options -->
@@ -66,9 +72,11 @@
             <p><strong>VIP Access</strong></p>
             <p>Quantity <span class="quantity">2</span></p>
             <div class="quantity-controls">
+            <p><strong>Update ticket</strong></p>  
                 <button>-</button>
                 <button>+</button>
             </div>
+            <label for="input promo code for"
             <input type="text" placeholder="Promo code">
             <p>Total Amount: <span class="total">$200</span></p>
             <button class="checkout">Proceed to checkout</button>
@@ -80,28 +88,28 @@
         <h2>Browse More</h2>
         <div class="event-cards">
             <div class="event-card">
-                <img src="/assets/img4.svg" alt="Event Image 1">
+              <img src="./assets/img7.svg" alt="" />
                 <h3>Title of Event 1</h3>
                 <p>5th Oct. 2024 @ Merit House</p>
-                <button class="get-ticket-btn">Get Ticket</button>
+                <button class="get-ticket-btn"><a href="ticket2.html">Get Ticket</a></button>
             </div>
             <div class="event-card">
-                <img src="event2.jpg" alt="Event Image 2">
+              <img src="./assets/img5.svg" alt="" />
                 <h3>Title of Event 2</h3>
                 <p>5th Oct. 2024 @ Merit House</p>
-                <button class="get-ticket-btn">Get Ticket</button>
+                <button class="get-ticket-btn"<a href="ticket2.html">Get Ticket</a></button>
             </div>
             <div class="event-card">
-                <img src="event3.jpg" alt="Event Image 3">
+              <img src="./assets/teacher (2).png" alt="" />
                 <h3>Title of Event 3</h3>
                 <p>5th Oct. 2024 @ Merit House</p>
-                <button class="get-ticket-btn">Get Ticket</button>
+                <button class="get-ticket-btn"><a href="ticket2.html">Get Ticket</a></button>
             </div>
             <div class="event-card">
-                <img src="/assets/img6.svg" alt="Event Image 4">
+                <img src="./assets/img6.svg" alt=""/>
                 <h3>Title of Event 4</h3>
                 <p>5th Oct. 2024 @ Merit House</p>
-                <button class="get-ticket-btn">Get Ticket</button>
+                <button class="get-ticket-btn"><a href="ticket2.html">Get Ticket</a></button>
             </div>
         </div>
     </div>
