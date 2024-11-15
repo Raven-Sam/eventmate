@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Platform</title>
+  <style>
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #1F1D3F 2.9%, rgba(255, 255, 255, 0) 100%);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  margin: 40px 0;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.cta-button{
+  border-style:solid;
+  border-color:#ff8c3d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cta-secondary {
+  border-color: #ff8c3d ;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cta-secondary {
+  background-color: #ff8c3d;
+}
+
+.cta-button:hover, .cta-secondary:hover {
+  opacity: 0.8;
+}
+
+/* Events Section */
+.events-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.events-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background-color: white;
+  width: 30%;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.event-card h3 {
+  margin: 15px 0;
+}
+
+.event-btn {
+  background-color: #ff6b00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-btn:hover {
+  opacity: 0.8;
+}
+
+/* Organisers Section */
+.organisers-section {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.organisers-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.organiser-card {
+  background-color: white;
+  width: 18%;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.organiser-card:hover {
+  transform: translateY(-5px);
+}
+
+.organiser-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.organiser-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.organiser-btn:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-info, .footer-links, .footer-contact {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+}
+
+.footer-info p {
+  margin: 10px 0;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links h3, .footer-contact h3 {
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .events-container, .organisers-container {
+    flex-direction: column;
+  }
+
+  .event-card, .organiser-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar, .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .cta-button, .cta-secondary {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="./index.html"><img src="./assets/Logo.svg" alt="" /></a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search events...">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Find Events</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Discover, Connect, and Elevate Your Event Experience</h1>
+      <p>Join a platform that simplifies event planning, enhances attendee engagement, and unlocks personalized networking opportunities. Whether you're hosting or attending, EventMate brings everything you need for a seamless event journey.</p>
+      <a href="#" class="cta-button">Explore Events Near You</a>
+      <a href="#" class="cta-secondary">Create an Event</a>
+    </div>
+  </header>
+
+  <!-- Top Trending Events Section -->
+  <section class="events-section">
+    <h2>Top Trending in Abuja</h2>
+    <div class="events-container">
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <img src="teacher" alt="Event 1">
+        <h3>Leadership Summit</h3>
+        <p>Title of Events  Loreme dummy text .... </p>
+        <button class="event-btn">Join Now</button>
+      </div>
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <img src="event2.jpg" alt="Event 2">
+        <h3>Tech Expo</h3>
+        <p>Title of Events  Loreme dummy text .... </p>
+        <button class="event-btn">Join Now</button>
+      </div>
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <img src="event3.jpg" alt="Event 3">
+        <h3>Business Forum</h3>
+        <p>Title of Events  Loreme dummy text .... </p>
+        <button class="event-btn">Join Now</button>
+      </div>
+      <!-- Event Card 4 -->
+    <div class="event-card">
+      <img src="event4.jpg" alt="Event 4">
+      <h3>Business Forum</h3>
+      <p>Title of Events  Loreme dummy text .... </p>
+      <button class="event-btn">Join Now</button>
+    </div>
+    <!-- Event Card 5 -->
+    <div class="event-card">
+      <img src="event3.jpg" alt="Event 5">
+      <h3>Business Forum</h3>
+      <p>Title of Events  Loreme dummy text .... </p>
+      <button class="event-btn">Join Now</button>
+    </div>
+     <!-- Event Card 6 -->
+     <div class="event-card">
+      <img src="event3.jpg" alt="Event 6">
+      <h3>Business Forum</h3>
+      <p>Title of Events  Loreme dummy text .... </p>
+      <button class="event-btn">Join Now</button>
+    </div>
+    <!-- Event Card 7 -->
+  <div class="event-card">
+    <img src="event4.jpg" alt="Event 7">
+    <h3>Business Forum</h3>
+    <p>Title of Events  Loreme dummy text .... </p>
+    <button class="event-btn">Join Now</button>
+  </div>
+  <!-- Event Card 8 -->
+  <div class="event-card">
+    <img src="event3.jpg" alt="Event 8">
+    <h3>Business Forum</h3>
+    <p>Title of Events  Loreme dummy text .... </p>
+    <button class="event-btn">Join Now</button>
+  </div>
+  </div>
+  </section>
+
+  <!-- Virtual Events Section -->
+  <section class="events-section">
+    <h2>Virtual Events</h2>
+    <div class="events-container">
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <img src="event4.jpg" alt="Event 4">
+        <h3>Online Webinar</h3>
+        <p>Virtual</p>
+        <button class="event-btn">Join Now</button>
+      </div>
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <img src="event5.jpg" alt="Event 5">
+        <h3>Virtual Workshop</h3>
+        <p>Virtual</p>
+        <button class="event-btn">Join Now</button>
+      </div>
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <img src="event6.jpg" alt="Event 6">
+        <h3>Remote Conference</h3>
+        <p>Virtual</p>
+        <button class="event-btn">Join Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Know Your Organiser Section -->
+  <section class="organisers-section">
+    <h2>Know Your Organiser</h2>
+    <div class="organisers-container">
+      <div class="organiser-card">
+        <img src="organiser1.jpg" alt="Organiser 1">
+        <h3>Corporate Event</h3>
+        <a href="#" class="organiser-btn">Follow</a>
+      </div>
+      <div class="organiser-card">
+        <img src="organiser2.jpg" alt="Organiser 2">
+        <h3>Corporate Event</h3>
+        <a href="#" class="organiser-btn">Follow</a>
+      </div>
+      <div class="organiser-card">
+        <img src="organiser3.jpg" alt="Organiser 3">
+        <h3>Corporate Event</h3>
+        <a href="#" class="organiser-btn">Follow</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>EVENTIFY</h3>
+        <p>Connecting people through events and experiences.</p>
+        <ul class="social-links">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>More Info</h3>
+        <ul>
+          <li><a href="#">Find Events</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@eventify.com</p>
+        <p>Phone: +234 123 456 789</p>
+      </div>
+    </div>
+    <p>&copy; 2024 EVENTIFY. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

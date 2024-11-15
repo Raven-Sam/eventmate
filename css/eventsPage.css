@@ -18,6 +18,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .nav {
@@ -118,7 +119,11 @@ li {
   margin-top: 10px;
   padding-top: 10px;
 }
-
+.btn a{
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
 button {
   padding: 10px 25px;
   background-color: #ff7a00;

@@ -1,13 +1,15 @@
-/* Basic reset and styling */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f3f6fb;
 }
 
 /* Navbar */
@@ -65,102 +67,15 @@ nav .logo {
     color: black;
     text-decoration: none;
   }
-/* Ticket Selection Section */
-.ticket-selection {
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.ticket-selection h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-.tickets {
+main {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    padding: 20px;
     flex-wrap: wrap;
-}
-
-/* Ticket Card */
-.ticket-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0; /* for fade-in animation */
-}
-
-.ticket-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.ticket-card h2 {
-    font-size: 22px;
-    color: #333;
-}
-
-.price {
-    font-size: 24px;
-    color: #333;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.ticket-card ul {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.availability {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #777;
-}
-
-button {
-    padding: 10px 20px;
-    border-style: 8px bold;
-    border-color: #ff6600;
-    background-color: white;
-    border-style: bold;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #ff944d;
-    transform: scale(1.05);
-}
-
-/* Selection Summary */
-.selection-summary {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInLeft 0.8s ease forwards;
-    margin-top:10px;
-    opacity: 0; /* for fade-in animation */
-}
-/* Browse More Section */
-/* Browse More Section - Fixed Bottom Right */
-.browse-more {
+    justify-content: space-between;
+}.browse-more {
     background: transparent;
-    position:relative;
     bottom: 200px;
     left: 70%;
     width: 380px; /* Adjusted to fit a 2x2 grid */
@@ -221,39 +136,62 @@ button:hover {
     color: #777;
     margin: 5px 0;
 }
+.payment-methods {
+    background-color: rgb(201, 196, 230);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-/* Get Ticket Button */
-.get-ticket-btn {
-    margin-top: 5px;
-    padding: 8px 12px;
+.payment-methods h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
     background-color: #ff6600;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.get-ticket-btn a{
-    color: white;
-    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.get-ticket-btn:hover {
-    background-color: #ff944d;
-    transform: scale(1.05);
+button:hover {
+    background-color: #e85555;
 }
-
-/* Animations */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
 
 /* Footer */
 
