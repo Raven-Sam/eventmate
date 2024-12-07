@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.185),rgba(0, 0, 0, 0.356)),url("../assets/Ticket\ Page\ \(2\).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100vh;
+    filter: blur(0.5);
+    display:block;
+    justify-items:center;
+    align-items:center;
+}
+.payment{
+    background:white;
+    display:block;
+    justify-items:center;
+    width:30%;
+    height:500px;
+    line-height:40px;
+    padding:10px;
+    margin-top:90px;
+    border-radius:8px;
+}
+img{
+    width:90px;
+    margin-top:20px;
+}
+h2{
+    color: red;
+    font-size:20px;
+    margin-top:10px;
+}
+h1{
+    color: rgb(33, 31, 67);
+    margin-top:20px;
+}
+p{
+    color:rgb(33, 31, 67);
+    font-size:20px;
+    margin-top: 10px;
+}
+button{
+    width: 150px;
+    padding:8px;
+    background:white;
+    border-radius:8px;
+    border:2px solid #ff944d;
+    margin-top:20px;
+}
+button a{
+    text-decoration:none;
+    color:rgb(33, 31, 67);
+}
+button:active{
+    background:#ff944d;
+}

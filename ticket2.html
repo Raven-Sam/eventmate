@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventMate - Ticket Page</title>
     <link rel="stylesheet"  href="./css/ticket2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -19,7 +20,7 @@
         <div class="routes">
           <ul>
             <li class="eventlink"><a href="#">Cart</a></li>
-            <li class="eventlink"><a href="#">Events</a></li>
+            <li class="eventlink"><a href="eventsPage.html">Events</a></li>
             <li class="eventlink"><a href="#">Accounts</a></li>
           </ul>
         </div>
@@ -29,8 +30,10 @@
     <!-- Main Content -->
     <main>
                 <!-- Add more event cards as needed -->
-            </div>
-            <div class="browse-more">
+         <div class="browse-more">
+          <div class="card-pic">
+            <img src="./assets/QR code and card payment.png" alt="" />
+          </div>   
                 <h2>Latest Event</h2>
                 <div class="event-cards">
                     <div class="event-card">
@@ -40,7 +43,7 @@
                         <button class="get-ticket-btn">Get Ticket</button>
                     </div>
                     <div class="event-card">
-                      <img src="./assets/img5.svg" alt="" />
+                      <img src="./assets/img5.svg" alt="" height="200px"/>
                         <h3>Title of Event 2</h3>
                         <p>5th Oct. 2024 @ Merit House</p>
                         <button class="get-ticket-btn">Get Ticket</button>
@@ -55,34 +58,52 @@
                         <img src="./assets/img6.svg" alt=""/>
                         <h3>Title of Event 4</h3>
                         <p>5th Oct. 2024 @ Merit House</p>
-                        <button class="get-ticket-btn">Get Ticket</button>
+                        <button class="get-ticket-btn"> <img src="assets/Vector (1).png">Get Ticket</button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="payment-methods">
+         </div>
+        <div class="payment-methods">
+          <div class="payers-info">
+            <h2>Payers information</h2>
+            <p>Name:james Smith</p>
+            <p>Email:jamessmith@gmail.com</p>
+            <p>Phone Number:+902209232343</p>
+            <p>Phone Number:+902209232343</p>
+            <p>Total Amount:$200</p>
+          </div>
             <h2>Payment Methods</h2>
-            <form id="payment-form">
-                <div class="input-group">
-                    <label for="name">Name on Card</label>
-                    <input type="text" id="name" placeholder="John Smith" required>
+            <div class="payment-form-container">
+              <div class="payment-icons">
+                <img src="assets/Mastercard.png" alt=""/>
+                <img src="assets/PayPal.png" alt="PayPal">
+                <img src="assets/Rectangle.png" alt="Other">
+                <img src="assets/Visa.png" alt="Visa">
+              </div>
+              <form class="payment-form">
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" placeholder="John Smith" required>
+          
+                <label for="card-number">Card Number</label>
+                <div class="card-number-container">
+                  <input type="text" id="card-number" placeholder="xxxx - xxxx - xxxx - xxxx" required>
+                  <img src="assets/Mastercard.png" alt="MasterCard Icon">
                 </div>
-                <div class="input-group">
-                    <label for="card-number">Card Number</label>
-                    <input type="text" id="card-number" placeholder="XXXX - XXXX - XXXX - XXXX" required>
+          
+                <label for="expiry-date">Expiring Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+          
+                <label for="cvv">CVV</label>
+                <div class="cvv-container">
+                  <input type="text" id="cvv" placeholder="123" required>
+                  <img src="assets/lock.png" alt="Lock Icon">
                 </div>
-                <div class="input-group">
-                    <label for="expiry">Expiring Date</label>
-                    <input type="text" id="expiry" placeholder="MM/YY" required>
-                </div>
-                <div class="input-group">
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" placeholder="123" required>
-                </div>
-                <button type="submit">Pay $200 Now</button>
-            </form>
-        </section>
+          
+                <button class="submit"><a href="success.html">Pay $200 Now</a></button>
+              </form>
+            </div>
+            <button class="back-home"><a href="eventsPage.html">Back To Event</a></button>
+        <button class="wrong"><a href="fail.html">wrong</a></button>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -148,6 +169,12 @@
             </div>
           </div>
         </div>
+        <div>
+            <i class="socials"><img src="./assets/Facebook.svg" alt=""></i>
+            <i class="socials"><img src="./assets/linkedln.svg" alt=""></i>
+            <i class="socials"><img src="./assets/Google.svg" alt=""></i>
+            <i class="socials"><img src="./assets/Twitter.svg" alt=""></i>
+           </div>
         <hr />
         <p>&copy; 2024 EventMate. All rights reserved.</p>
       </div>

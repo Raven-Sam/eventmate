@@ -58,14 +58,24 @@ nav .logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 20px;
-    gap: 10px;
+    padding-right: 40px;
+    margin-right: 50px;
+  }
+  .routes ul li{
+    color: #666;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
   }
   .routes ul li a{
     color: black;
     text-decoration: none;
+  }
+  .routes ul li:hover{
+    text-decoration: underline #ff6600;
+
   }
 
 main {
@@ -73,12 +83,20 @@ main {
     gap: 20px;
     padding: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
-}.browse-more {
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-pic{
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.browse-more {
     background: transparent;
     bottom: 200px;
     left: 70%;
-    width: 380px; /* Adjusted to fit a 2x2 grid */
+    width: 500px; /* Adjusted to fit a 2x2 grid */
     border: none;
     padding: 15px;
     animation: slideIn 0.5s ease-in-out;
@@ -124,6 +142,7 @@ main {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 8px;
+    transform: translateY(-5px);
 }
 
 .event-card h3 {
@@ -135,62 +154,139 @@ main {
     font-size: 14px;
     color: #777;
     margin: 5px 0;
-}
-.payment-methods {
-    background-color: rgb(201, 196, 230);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.payment-methods h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-}
-
-.input-group input:focus {
-    border-color: #ff6600;
-    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+}button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #e85555;
+  background-color: #ff8c42;
+  color: #fff;
+}
+.event-card button img{
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.payers-info{
+  margin-bottom: 90px;
+}
+.payers-info h2{
+  color: #333;
+}
+.payers-info p{
+  color: #333;
+  line-height: 30px;
+  font-size: 20px;
+
+}
+
+.payment-methods h2{
+  color: #333;
+  margin-bottom: 20px;}
+.payment-form-container {
+  background-color: hsl(261, 44%, 70%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.payment-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.card-number-container,
+.cvv-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-number-container input,
+.cvv-container input {
+  flex: 1;
+}
+
+.card-number-container img,
+.cvv-container img {
+  margin-left: 10px;
+}
+.submit{
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.submit a{
+  color: white;
+  text-decoration: none;
+}
+.back-home{
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+.back-home a{
+  color: white;
+  text-decoration: none;
+}
+
+.wrong{
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+.wrong a{
+  color: white;
+  text-decoration: none;
+}
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* Footer */
@@ -225,7 +321,9 @@ button:hover {
   }
   
   .footer-card-body {
-    margin: 10px 0;
+    margin: 10px ;
+    display: block;
+    padding: 15px;
   }
   
   .footer-card-body h4 {
@@ -235,6 +333,11 @@ button:hover {
     padding: 7px 0;
     font-size: 0.9rem;
     opacity: 50%;
+  }
+  .socials{
+    display: inline;
+    margin: 18px;
+    
   }
   
   .footer hr {
