@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Selection - EventMate</title>
     <link rel="stylesheet" href="./css/ticket1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -19,18 +20,16 @@
       <div class="routes">
         <ul>
           <li class="eventlink"><a href="#">Cart</a></li>
-          <li class="eventlink"><a href="#">Events</a></li>
-          <li class="eventlink"><a href="#">Accounts</a></li>
+          <li class="eventlink"><a href="eventsPage.html">Events</a></li>
+          <li class="eventlink"><a href="organiser.html">Accounts</a></li>
         </ul>
       </div>
     </nav>
-
-    <!-- Ticket Selection Section -->
-    <section class="ticket-selection">
+  <main>
+    <div class="ticket-selection">
       <div><img src="./assets/tickets with paper clip.png" alt="" /></div>
         <h1>Choose Your Ticket Type</h1>
         <div class="tickets">
-            <!-- Ticket Options -->
             <div class="ticket-card">
                 <h2>VIP Access</h2>
                 <p class="price">$100</p>
@@ -40,7 +39,7 @@
                     <li>Free Merch</li>
                 </ul>
                 <p class="availability">Availability: <span class="available">20 tickets Left</span></p>
-                <button>Select</button>
+                <button><a href="ticket2.html">Select</a></button>
             </div>
 
             <div class="ticket-card">
@@ -51,7 +50,7 @@
                     <li>Access to all section</li>
                 </ul>
                 <p class="availability">Availability: <span class="available">Available</span></p>
-                <button>Select</button>
+                <button><a href="ticket2.html">Select</a></button>
             </div>
 
             <div class="ticket-card">
@@ -62,28 +61,28 @@
                     <li>Limited availability</li>
                 </ul>
                 <p class="availability">Availability: <span class="limited">only 5 left</span></p>
-                <button>Select</button>
+                <button><a href="ticket2.html">Select</a></button>
             </div>
         </div>
-
-        <!-- Selected Ticket Summary -->
+      <div class="section-2">
         <div class="selection-summary">
             <h2>Your Selection</h2>
-            <p><strong>VIP Access</strong></p>
-            <p>Quantity <span class="quantity">2</span></p>
+           <div> <p><strong>VIP Access</strong></p></div>
+            <p><strong>Quantity <span>2</span></strong></p>
             <div class="quantity-controls">
             <p><strong>Update ticket</strong></p>  
                 <button>-</button>
+                1
                 <button>+</button>
             </div>
-            <label for="input promo code for"
-            <input type="text" placeholder="Promo code">
-            <p>Total Amount: <span class="total">$200</span></p>
-            <button class="checkout">Proceed to checkout</button>
+            <form action="">
+              <label for="input">Input promo code for discount</label>
+            <div><input type="text" placeholder="Promo code"></div>
+            </form>
+            <p><strong>Total Amount</strong></p> <span class="total">$200</span>
+            <button class="checkout"><a href="ticket2.html">Proceed to checkout</a></button>
         </div>
-    </section>
 
-    <!-- Browse More Section -->
     <div class="browse-more">
         <h2>Browse More</h2>
         <div class="event-cards">
@@ -97,7 +96,7 @@
               <img src="./assets/img5.svg" alt="" />
                 <h3>Title of Event 2</h3>
                 <p>5th Oct. 2024 @ Merit House</p>
-                <button class="get-ticket-btn"<a href="ticket2.html">Get Ticket</a></button>
+                <button class="get-ticket-btn"><a href="ticket2.html">Get Ticket</a></button>
             </div>
             <div class="event-card">
               <img src="./assets/teacher (2).png" alt="" />
@@ -112,8 +111,10 @@
                 <button class="get-ticket-btn"><a href="ticket2.html">Get Ticket</a></button>
             </div>
         </div>
+     </div>
     </div>
-    
+  </div>
+  </main>
     <!-- Footer -->
     <div class="footer">
         <div class="footer-row">
@@ -177,6 +178,12 @@
             </div>
           </div>
         </div>
+        <div>
+          <i class="socials"><img src="./assets/Facebook.svg" alt=""></i>
+          <i class="socials"><img src="./assets/linkedln.svg" alt=""></i>
+          <i class="socials"><img src="./assets/Google.svg" alt=""></i>
+          <i class="socials"><img src="./assets/Twitter.svg" alt=""></i>
+         </div>
         <hr />
         <p>&copy; 2024 EventMate. All rights reserved.</p>
       </div>
